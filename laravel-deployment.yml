@@ -1,0 +1,31 @@
+---
+- hosts: all
+  become: yes
+  vars:
+    laravel_app_url: https://{{ ansible_host }}/laravel
+    laravel_db_name: laravel
+
+  tasks:cccccc
+  - name: Deploy Laravel application
+    script: provision.sh
+    args:
+      laravel_app_url: "{{ laravel_app_url }}"
+      laravel_db_name: "{{ laravel_db_name }}"
+
+  - name: Verify PHP application
+    uri:
+      url: "{{ laravel_app_url }}"
+      status_code: 200
+    register: result
+
+  - name: Take screenshot of PHP application
+    command: "gnome-screenshot -f /tmp/laravel_screenshot.png"
+    when: result.status == 200
+
+  - name: Create Cron Job
+      cron:
+        name: Check Server Uptime
+        job: /usr/bin/uptime > /var/log/uptime.log
+        minute: 0
+        hour: 0
+      become_user: root
