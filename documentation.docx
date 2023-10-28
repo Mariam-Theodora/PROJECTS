@@ -1,0 +1,103 @@
+
+1              PROJECT DOCUMENTATION  
+
+  Automating LAMP Stack Deployment with Vagrant using Bash script 
+and Ansible on Master and Slave Node. 
+ 
+ 
+ 
+Table of Contents 
+ 
+1. **Project Overview** 
+   - Introduction 
+   - Purpose and Goals 
+   - Technologies Used 
+ 
+2. **Vagrant Configuration** 
+   - Setting Up the Master and Slave Nodes 
+   - Vagrantfile Configuration 
+ 
+3. **Bash Script for LAMP Stack Deployment** 
+   - Description and Purpose 
+   - Script Structure 
+   - Reusability and Readability Considerations 
+   - Usage Instructions 
+   - Screenshot of the LAMP Stack on the Master Node 
+ 
+4. **Ansible Playbook** 
+   - Introduction to Ansible 
+   - Executing the Bash Script on the Slave Node 
+   - Verifying PHP Application Accessibility 
+   - Creating a Cron Job for Server Uptime Checks 
+   - Screenshots for Ansible Playbook Execution and Uptime Cron Job 
+ 
+5. **Project Files and Directory Structure** 
+   - Explanation of Project Directory Structure 
+   - Listing of Key Project Files 
+ 
+6. **Dependencies** 
+   - List of Dependencies (Vagrant, Ansible, etc.) 
+   - Installation Instructions 
+ 
+7. **Configuration** 
+   - Configurable Options in the Bash Script 
+   - Modifying Vagrant Configuration 
+   - Configuration Files (e.g., Vagrantfile, Ansible playbook) 
+ 
+8. **Troubleshooting** 
+   - Common Issues and Error Messages 
+   - Solutions and Workarounds 
+ 
+9. **Final Conclusion** 
+ 
+ 
+ 
+ 
+ 
+Project Overview 
+ 
+ 
+Introduction 
+ 
+Welcome to the documentation for our project, which focuses on automating the provisioning and 
+deployment of a LAMP (Linux, Apache, MySQL, PHP) stack on two Ubuntu-based servers, named 
+"Master" and "Slave," using Vagrant and Ansible. 
+ 
+This documentation aims to provide a clear and detailed guide to help you set up and configure the 
+project. We'll walk you through the process of deploying the LAMP stack on the Master node using 
+a Bash script and then automating the execution of this script on the Slave node through Ansible. 
+Additionally, we'll create a cron job to check the server's uptime daily at 12 am. 
+ 
+The project is designed to enhance efficiency and repeatability in deploying web applications, 
+making it a valuable resource for system administrators, developers, and anyone interested in 
+automating server configuration. 
+ 
+Let's get started with the step-by-step instructions and explanations to ensure a successful setup of 
+your LAMP stack! 
+ 
+ 
+Purpose and Goals 
+ 
+The primary purpose of this project is to automate the setup and deployment of a LAMP stack on 
+multiple servers. By automating the provisioning and configuration of web servers, we aim to 
+streamline the process of deploying web applications. This project seeks to enhance efficiency, 
+reduce manual tasks, and ensure consistency in server configuration. 
+ 
+Goals 
+• Automation: Automate the provisioning and configuration of LAMP stacks on two Ubuntu-
+based servers. 
+• Reusability: Create a reusable and adaptable solution for web server deployment. 
+• Efficiency: Reduce the time and effort required to set up web servers and deploy 
+applications. 
+• Consistency: Ensure consistent server configuration across Master and Slave nodes. 
+• Monitoring: Implement a server uptime check to monitor system health. 
+ 
+ 
+Technologies Used 
+ 
+This project leverages the following technologies and tools: 
+• Vagrant: Used for server provisioning and virtual machine management. 
+• Ansible: Employed for automation of software provisioning, configuration, and 
+deployment. 
+• Ubuntu: The chosen operating system for both the Master and Slave nodes. 
+• Linux: The foundation of the open-source LAMP stack. 
